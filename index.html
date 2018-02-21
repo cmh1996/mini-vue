@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mini-vue</title>
+</head>
+<body>
+  
+  <div id="app">
+    <input type="text" v-model="title">
+    <div>{{ title }}</div>
+    {{ title }}
+    <button onclick="setData()">test</button>
+  </div>
+
+  <script src="./vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: 'app',
+      data: {
+        title: '简化版vue'
+      }
+    })
+    function setData(){
+      vm.title = 'asd'
+    }
+  </script>
+</body>
+</html>
